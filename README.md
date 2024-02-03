@@ -12,6 +12,14 @@ el puerto del front es 4200
 
 la URL del backend deployado es **https://four7285-perezbruno.onrender.com**
 
+El usuario accede directamente a la pagina de inicio, donde se ven los productos.
+
+Para conocer más detalles del producto se hace click sobre el producto y se ven los detalles.
+
+Para poder subir el producto al carrito es necesario iniciar sessión.
+
+Si no es un usuario registrado, puede registrarse.
+
 Aguardo con ansias la devolución!
 
 Saludos y buen año!
