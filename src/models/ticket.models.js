@@ -1,27 +1,27 @@
+
+
+
 import { Schema, model } from "mongoose";
 
-const ticketSchema = new Schema({
-    code: {
-        type: String,
-        required: true,
-        unique: true,
-      },
-    purchase_datetime: { // inserta la fecha y la hora de la operacion
-        type: Date,
-        default: Date.now,
-      },
-    amount: { // toma el total de la compra
-        type: Number,
-        required: true,
-      },
-    purchaser: { //toma el email del usuario que realiza la compra
-        type: Schema.Types.String,
-        ref: "users"
-      },
-});
+const ticketSchema = new Schema(
+    {
+        code: {
+            type: String,
+        },
+        purchase_datetime: {
+            type: Date,
+            default: Date.now
+        },
+        amount: {
+            type: Number,
+            required: true
+        },
+        purchaser: {
+            type: String,
+            required: true
+        },
+    },
+    { versionKey: false }
+);
 
-ticketSchema.pre("findOne", function () {
-  this.populate("users.email");
-});
-
-export const ticketModel = model("ticket", ticketSchema);
+export const ticketModel = model("tickets", ticketSchema);

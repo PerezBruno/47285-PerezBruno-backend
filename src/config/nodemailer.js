@@ -27,8 +27,6 @@ export const sendRecoveryMail = (email, recoveryLinc)=>{
   transporter.sendMail(mailOptions, (error, info)=>{
     if(error)
     console.log("🚀 ~ file: nodemailer.js:30 ~ transporter.sendMail ~ error:", error)
-    else
-      console.log("email enviado correctamente")
   })
 }
 
@@ -49,8 +47,6 @@ export const sendPurchaseDetail = (email,data)=>{
   transporter.sendMail(mailOptions, (error, info)=>{
     if(error)
     console.log("🚀 ~ file: nodemailer.js:30 ~ transporter.sendMail ~ error:", error)
-    else
-      console.log("email enviado correctamente")
   })
 }
 

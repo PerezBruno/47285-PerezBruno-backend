@@ -11,7 +11,6 @@ export default class TicketController {
 
 
   postBuy = async (req, res) => {
-    console.log("ruta del backend")
     const {email} = req.body
     //let verifiedStock = [];
     let notEnoughStock = [];
@@ -53,10 +52,7 @@ export default class TicketController {
       })
     }
     } catch (error) {
-      console.log(
-        "🚀 ~ file: ticket.controllers.js:14 ~ TicketController ~ postBuy ~ error:",
-        error
-      );
+      console.log("🚀 ~ TicketController ~ postBuy= ~ error:", error)
       res.status(400).json({
         message: "error generating ticket",
       });
